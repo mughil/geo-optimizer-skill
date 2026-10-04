@@ -53,7 +53,9 @@ async function main() {
     throw new Error('SANITY_API_TOKEN e\' obbligatorio per pubblicare gli articoli programmati.');
   }
 
-  const client = createSanityPublicationClient(token);
+  // A dry-run must use the public dataset without sending any authentication
+  // token; this keeps dry-run independent of CI secrets and session tokens.
+  const client = createSanityPublicationClient(dryRun ? undefined : token);
   const articles = await fetchDueScheduledArticles(client);
   const result = {
     dryRun,
