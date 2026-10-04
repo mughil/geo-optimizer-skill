@@ -589,9 +589,7 @@ def format_audit_text(result: AuditResult) -> str:
                 f"Health: {sm.health_score}/100"
             )
             if sm.has_lastmod and sm.newest_lastmod_days_ago is not None:
-                lines.append(
-                    f"  Freshest page: {sm.newest_lastmod_days_ago}d ago | Stale ratio: {sm.stale_ratio:.0%}"
-                )
+                lines.append(f"  Freshest page: {sm.newest_lastmod_days_ago}d ago | Stale ratio: {sm.stale_ratio:.0%}")
         for issue in sm.issues[:3]:
             lines.append(f"  ⚠️  {issue}")
 
