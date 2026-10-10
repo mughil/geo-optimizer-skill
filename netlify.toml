@@ -1,0 +1,6 @@
+[build]
+  command = "npm ci --prefix frontend && npm run generate:sitemap --prefix frontend && npm run build --prefix frontend"
+  publish = "frontend/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
