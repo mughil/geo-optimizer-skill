@@ -5,10 +5,12 @@ on:
     branches: [main]
     paths:
       - 'frontend/**'
+      - 'netlify.toml'
       - '.github/workflows/frontend-build.yml'
   pull_request:
     paths:
       - 'frontend/**'
+      - 'netlify.toml'
       - '.github/workflows/frontend-build.yml'
 
 permissions:
