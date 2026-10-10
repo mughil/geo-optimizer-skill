@@ -4,7 +4,7 @@
 
 import { createClient } from '@sanity/client';
 
-const DEFAULT_PROJECT_ID = 'uvzrnk4t';
+const DEFAULT_PROJECT_ID = 'ov1pl2ik';
 const DEFAULT_DATASET = 'production';
 
 export const DUE_ARTICLES_QUERY = `*[

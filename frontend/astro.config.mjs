@@ -40,7 +40,7 @@ export default defineConfig({
   integrations: [
     react(),
     sanity({
-      projectId: PUBLIC_SANITY_PROJECT_ID ?? 'uvzrnk4t',
+      projectId: PUBLIC_SANITY_PROJECT_ID ?? 'ov1pl2ik',
       dataset: PUBLIC_SANITY_DATASET ?? 'production',
       useCdn: false,
     }),

@@ -81,7 +81,7 @@ async function main() {
 
 main().catch((error) => {
   const hint = /Session does not match project host|Unauthorized/i.test(error.message)
-    ? ' Verify that SANITY_API_TOKEN is a Sanity project API token for uvzrnk4t (production), not a Studio session token; replace the GitHub repository secret if needed.'
+    ? ' Verify that SANITY_API_TOKEN is a Sanity project API token for ov1pl2ik (production), not a Studio session token; replace the GitHub repository secret if needed.'
     : '';
   console.error(`Pubblicazione Sanity fallita: ${error.message}${hint}`);
   process.exitCode = 1;

@@ -35,7 +35,7 @@ const LLMS_TXT_PATH = join(FRONTEND_ROOT, 'public', 'llms.txt');
 const SECTION_HEADING = '## Guides';
 const NEXT_HEADING_PREFIX = '## '; // qualunque heading di pari livello chiude la sezione
 
-const SANITY_PROJECT_ID = process.env.PUBLIC_SANITY_PROJECT_ID || 'uvzrnk4t';
+const SANITY_PROJECT_ID = process.env.PUBLIC_SANITY_PROJECT_ID || 'ov1pl2ik';
 const SANITY_DATASET = process.env.PUBLIC_SANITY_DATASET || 'production';
 
 // Stesso filtro "live" di generate-sitemap.mjs (frontend/src/utils/sanity.ts):
