@@ -28,7 +28,7 @@ logs.
 | `SANITY_API_TOKEN` | A Sanity API token with the minimum Editor permission for the production dataset. | Promotes only due documents from `scheduled` to `published`. |
 | `GEOREADY_DEPLOY_WEBHOOK_URL` | An authenticated endpoint that starts the production static-site deployment. | Rebuilds GeoReady after at least one article was published. |
 
-Create `SANITY_API_TOKEN` in the Sanity project `uvzrnk4t` for the
+Create `SANITY_API_TOKEN` in the Sanity project `ov1pl2ik` for the
 `production` dataset. A Sanity Studio login/session token is not an API token.
 If a publishing run says `Session does not match project host`, replace the
 GitHub secret with a project API token and rerun the workflow. An idle run can

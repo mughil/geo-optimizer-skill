@@ -67,7 +67,7 @@ const CATEGORY_TO_PATH = {
   resources: '/resources/',
 };
 
-const SANITY_PROJECT_ID = process.env.PUBLIC_SANITY_PROJECT_ID || 'uvzrnk4t';
+const SANITY_PROJECT_ID = process.env.PUBLIC_SANITY_PROJECT_ID || 'ov1pl2ik';
 const SANITY_DATASET = process.env.PUBLIC_SANITY_DATASET || 'production';
 
 // Stesso filtro "live" usato dal sito (frontend/src/utils/sanity.ts). I documenti

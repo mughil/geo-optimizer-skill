@@ -1,8 +1,8 @@
 import imageUrlBuilder from '@sanity/image-url';
 
 // projectId e dataset devono allinearsi con la configurazione Astro Sanity
-// (vedi astro.config.mjs — default: uvzrnk4t / production).
-const projectId = import.meta.env.PUBLIC_SANITY_PROJECT_ID ?? 'uvzrnk4t';
+// (vedi astro.config.mjs — default: ov1pl2ik / production).
+const projectId = import.meta.env.PUBLIC_SANITY_PROJECT_ID ?? 'ov1pl2ik';
 const dataset = import.meta.env.PUBLIC_SANITY_DATASET ?? 'production';
 
 const builder = imageUrlBuilder({ projectId, dataset });
