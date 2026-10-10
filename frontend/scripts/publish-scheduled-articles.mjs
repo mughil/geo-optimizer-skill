@@ -53,10 +53,9 @@ async function main() {
     throw new Error('SANITY_API_TOKEN e\' obbligatorio per pubblicare gli articoli programmati.');
   }
 
-  // A dry-run must use the public dataset without sending any authentication
-  // token; this keeps dry-run independent of CI secrets and session tokens.
-  const client = createSanityPublicationClient(dryRun ? undefined : token);
-  const articles = await fetchDueScheduledArticles(client);
+  // Finding due articles only needs the public dataset. Keep the credential
+  // out of this request so an expired token does not fail an idle schedule.
+  const articles = await fetchDueScheduledArticles();
   const result = {
     dryRun,
     dueCount: articles.length,
@@ -65,6 +64,7 @@ async function main() {
   };
 
   if (!dryRun && articles.length > 0) {
+    const client = createSanityPublicationClient(token);
     const transaction = client.transaction();
     for (const article of articles) {
       transaction.patch(article._id, { set: { status: 'published' } });
@@ -80,6 +80,9 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error(`Pubblicazione Sanity fallita: ${error.message}`);
+  const hint = /Session does not match project host|Unauthorized/i.test(error.message)
+    ? ' Verify that SANITY_API_TOKEN is a Sanity project API token for uvzrnk4t (production), not a Studio session token; replace the GitHub repository secret if needed.'
+    : '';
+  console.error(`Pubblicazione Sanity fallita: ${error.message}${hint}`);
   process.exitCode = 1;
 });
