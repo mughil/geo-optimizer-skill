@@ -54,7 +54,7 @@ pdf = [
     "weasyprint>=60.0",
 ]
 mcp = [
-    "mcp>=1.0.0",
+    "mcp>=2.3.0",
 ]
 embedding = [
     "sentence-transformers>=2.2.0,<7.0",
